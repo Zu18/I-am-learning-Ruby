@@ -10,10 +10,10 @@ Function should return true if it is possible and false if not.
 
 
 
-# Creating the method 
+# Creating the method
 
 def zero_fuel(distance, mpg, fuel_left)
-  fuel_required = distance / mpg               
+  fuel_required = distance.to_f / mpg               
   fuel_left >= fuel_required ? true : false
 end
 
