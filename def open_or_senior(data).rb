@@ -18,22 +18,20 @@ output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 #Creating the method
 
-def open_or_senior(data)
-  output = []
-  data.each do |x|
-    age = x[0]
-    handicap = x[1]
-    if handicap < -2 || handicap > 26
-      raise "Handicap should be from -2 to 26!"
-    end
-    if age >= 55 && handicap > 7
-      output << "Senior"
-    else
-      age <55
-      output << "Open"
-    end
+def handicap_limit(handicap)
+  if handicap < -2 || handicap > 26
+    raise "Handicap should be from -2 to 26!"
   end
-  return output
+
+end
+
+def open_or_senior(data)
+  data.map do |x|
+    age = x[0]
+    handicap =x[1]
+    handicap_limit(handicap)
+    age >= 55 && handicap > 7 ? "Senior" : "Open"
+  end
 end
 
 # Calling the method for testing (using "p" method to view debug output):
