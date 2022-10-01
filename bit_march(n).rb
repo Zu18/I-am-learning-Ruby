@@ -28,10 +28,10 @@ n = 3
 #Creating the method
 def bit_march(n)
   array = Array.new(8, default_element=0)
-  n.times{array.push(1)}
-  array.shift(n)
-  array[8-1] = 0 if array.size < 8
-  new_array = [array.dup]
+  n.times{array.push(1)}                # to add an element to the end of an array (n-times)
+  array.shift(n)                            # to remove fist n-elements in an array
+  array[8-1] = 0 if array.size < 8          # to add 0 to the end an array if a size of the array less than 8
+  new_array = [array.dup]                   # to save copy of an array in a new array
     while array[0] == 0
      array.shift
      array[8-1] = 0 if array.size < 8
