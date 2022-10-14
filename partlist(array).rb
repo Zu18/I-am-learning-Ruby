@@ -39,4 +39,5 @@ def partlist(array)
   result
 end
 
+# Calling the method for testing (using "p" method to view debug output):
 p partlist(["I", "wish", "I", "hadn't", "come"])

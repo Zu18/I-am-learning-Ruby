@@ -22,5 +22,6 @@ def is_sorted_and_how(array)
     end
 end
 
+
 p is_sorted_and_how([15, 7, 3, -8])
 
