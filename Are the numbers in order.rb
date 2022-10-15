@@ -21,6 +21,7 @@ def is_asc_order(array)
   array == array.sort ? true : false
 end
 
+# Calling the method for testing (using "p" method to view debug output):
 p is_asc_order([1, 2, 3])
 
 =begin
