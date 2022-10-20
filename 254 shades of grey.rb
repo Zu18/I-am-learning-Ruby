@@ -29,6 +29,7 @@ def shades_of_grey(n)
   arr
 end
 
+# Calling the method for testing (using "p" method to view debug output):
 p shades_of_grey(255)
 
 
